@@ -1,12 +1,23 @@
+import { BrowserRouter as Router, Route, Routes} from  'react-router-dom';
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import SeasonSchedule from './pages/SeasonSchedule'
+import SeasonOverview from './pages/SeasonOverview'
+import ManagePlayers from './pages/ManagePlayers'
+import PlayerInfo from './pages/PlayerInfo'
+
 function App() {
   return (
-    <div>
-      <p>hey whats up its the pickems app</p>
-      <p>ur gonna need to add the season schedule before entering picks: <br/>Season Schedule</p>
-      <p>heres where ur gonna manage players <br/>Manage Players</p>
-      <p>hey heres where you can see player info maybe its a cool dropdown <br/>Player Info</p>
-      <p>and for overview we could have <br/>Season Overview</p>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/season-schedule" element={<SeasonSchedule />}></Route>
+        <Route path="/season-overview" element={<SeasonOverview />}></Route>
+        <Route path="/manage-players" element={<ManagePlayers />}></Route>
+        <Route path="/player-info" element={<PlayerInfo />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
+    </Router>
   )
 }
 

@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Arizona Cardinals",
+    "code": "ARI"
+  },
+  {
+    "name": "Atlanta Falcons",
+    "code": "ATL"
+  },
+  {
+    "name": "Baltimore Ravens",
+    "code": "BAL"
+  },
+  {
+    "name": "Buffalo Bills",
+    "code": "BUF"
+  },
+  {
+    "name": "Carolina Panthers",
+    "code": "CAR"
+  },
+  {
+    "name": "Chicago Bears",
+    "code": "CHI"
+  },
+  {
+    "name": "Cincinnati Bengals",
+    "code": "CIN"
+  },
+  {
+    "name": "Cleveland Browns",
+    "code": "CLE"
+  },
+  {
+    "name": "Dallas Cowboys",
+    "code": "DAL"
+  },
+  {
+    "name": "Denver Broncos",
+    "code": "DEN"
+  },
+  {
+    "name": "Detroit Lions",
+    "code": "DET"
+  },
+  {
+    "name": "Green Bay Packers",
+    "code": "GB"
+  },
+  {
+    "name": "Houston Texans",
+    "code": "HOU"
+  },
+  {
+    "name": "Indianapolis Colts",
+    "code": "IND"
+  },
+  {
+    "name": "Jacksonville Jaguars",
+    "code": "JAC"
+  },
+  {
+    "name": "Kansas City Chiefs",
+    "code": "KC"
+  },
+  {
+    "name": "Las Vegas Raiders",
+    "code": "LV"
+  },
+  {
+    "name": "Los Angeles Chargers",
+    "code": "LAC"
+  },
+  {
+    "name": "Los Angeles Rams",
+    "code": "LAR"
+  },
+  {
+    "name": "Miami Dolphins",
+    "code": "MIA"
+  },
+  {
+    "name": "Minnesota Vikings",
+    "code": "MIN"
+  },
+  {
+    "name": "New England Patriots",
+    "code": "NE"
+  },
+  {
+    "name": "New Orleans Saints",
+    "code": "NO"
+  },
+  {
+    "name": "New York Giants",
+    "code": "NYG"
+  },
+  {
+    "name": "New York Jets",
+    "code": "NYJ"
+  },
+  {
+    "name": "Philadelphia Eagles",
+    "code": "PHI"
+  },
+  {
+    "name": "Pittsburgh Steelers",
+    "code": "PIT"
+  },
+  {
+    "name": "San Francisco 49ers",
+    "code": "SF"
+  },
+  {
+    "name": "Seattle Seahawks",
+    "code": "SEA"
+  },
+  {
+    "name": "Tampa Bay Buccaneers",
+    "code": "TB"
+  },
+  {
+    "name": "Tennessee Titans",
+    "code": "TEN"
+  },
+  {
+    "name": "Washington Commanders",
+    "code": "WAS"
+  }
+]
