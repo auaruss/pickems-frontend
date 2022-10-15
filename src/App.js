@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>hey whats up its the pickems app</p>
+      <p>ur gonna need to add the season schedule before entering picks: <br/>Season Schedule</p>
+      <p>heres where ur gonna manage players <br/>Manage Players</p>
+      <p>hey heres where you can see player info maybe its a cool dropdown <br/>Player Info</p>
+      <p>and for overview we could have <br/>Season Overview</p>
     </div>
-  );
+  )
 }
 
 export default App;
