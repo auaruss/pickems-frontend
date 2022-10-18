@@ -1,7 +1,7 @@
 import DisplayCardSet from '../DisplayCardSet/DisplayCardSet';
 import AddGameCard from '../AddGameCard/AddGameCard'
 import { useQuery } from '@apollo/client';
-import { GET_WEEK_ID_BY_NUMBER, GET_GAMES_BY_WEEK_ID } from '../../queries/game-queries';
+import { getGamesByWeekIdBuilder, GET_WEEK_ID_BY_NUMBER } from '../../queries/game-queries';
 import './DisplayOneWeek.css';
 
 export default function DisplayOneWeek({
@@ -10,7 +10,8 @@ export default function DisplayOneWeek({
   const {
     loading: weekIdLoading,
     error: weekIdError,
-    data: weekIdData
+    data: weekIdData,
+    refetch: weekIdRefetch
   } = useQuery(GET_WEEK_ID_BY_NUMBER, {
     variables: {
       weekNumber:week
@@ -20,16 +21,25 @@ export default function DisplayOneWeek({
   return (
     <div className="display-week">
       <h2 className="week-heading">Week {week}</h2>
-      {
-        (weekIdLoading) ? <></>
+      {                         // Since we don't want to display loading twice.
+        (weekIdLoading) ? <></> // (Displayed down below.)
         : (weekIdError) ? <p>Error!</p>
-        : <AddGameCard weekId={weekIdData.getWeekByNumber.id} GET_GAMES_BY_WEEK_ID={GET_GAMES_BY_WEEK_ID} />
+        : <AddGameCard
+            weekId={weekIdData.getWeekByNumber.id}
+            getGamesRefreshName={`GetGamesByWeek${week}Id`}
+          />
       }
       {
         (weekIdLoading) ? <p>Loading...</p>
-        : (weekIdError) ? <p>Error!</p>
-        : <DisplayCardSet weekId={weekIdData.getWeekByNumber.id} GET_GAMES_BY_WEEK_ID={GET_GAMES_BY_WEEK_ID} />
+        : (weekIdError) ? weekIdRefetch()
+        : <DisplayCardSet
+            getGamesQuery={
+              getGamesByWeekIdBuilder(week)(weekIdData.getWeekByNumber.id)
+            }
+          />
       }
+
+      {console.log(weekIdError)}
     </div>
   )
 }

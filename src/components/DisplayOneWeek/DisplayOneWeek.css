@@ -18,6 +18,11 @@
   font-size: 3rem;
 }
 
+.display-week {
+  border-bottom: 0.5rem solid black;
+  margin-bottom: 8rem;
+}
+
 @media screen and (min-width: 46rem) {
   .display-week {
     grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));

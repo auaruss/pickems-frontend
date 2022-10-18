@@ -8,13 +8,17 @@ const GET_WEEK_ID_BY_NUMBER = gql`
   }
 `;
 
-const GET_GAMES_BY_WEEK_ID = gql`
-  query GetGamesByWeekId($weekId: ID!) {
-    getGamesByWeekId(weekId: $weekId) {
-      home
-      away
-    }
-  }
-`;
+// This could be an optimization problem for apollo down the line?
+const getGamesByWeekIdBuilder = (weekNumber) => (weekId) => {
+  const x = `
+    query GetGamesByWeek${weekNumber}Id {
+      getGamesByWeekId(weekId: "${weekId}") {
+        home
+        away
+      }
+    }`;
 
-export { GET_WEEK_ID_BY_NUMBER, GET_GAMES_BY_WEEK_ID };
+  return gql`${x}`
+}
+
+export { getGamesByWeekIdBuilder, GET_WEEK_ID_BY_NUMBER };

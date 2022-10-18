@@ -9,14 +9,11 @@ const WEEKS = [...Array(END_WEEK).keys()].map(n=>n+1)
 export default function SeasonSchedule() {
   return (
     <main>
-      <p>
-        whoa look its the season schedule!<br/>
-        add some games here <br/><br/><br/></p>
-
-        <DisplayOneWeek 
-          week={1}
-
-        />
+      {
+        WEEKS.map(
+          (week) => <DisplayOneWeek week={week} key={week} />
+        )
+      }  
     </main>
   )
 }

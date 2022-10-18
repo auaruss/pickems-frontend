@@ -6,7 +6,7 @@ import selectionStyles from './selectionStyles';
 import './AddGameCard.css';
 import { ADD_GAME_MUTATION } from '../../mutations/game-mutations';
 
-export default function AddGameCard({ weekId }) {
+export default function AddGameCard({ weekId, getGamesRefreshName }) {
   const selectHomeInputRef = useRef();
   const selectAwayInputRef = useRef();
   const [home, setHome] = useState('');
@@ -20,7 +20,7 @@ export default function AddGameCard({ weekId }) {
       weekId
     },
     refetchQueries: [
-      'GetGamesByWeekId'
+      getGamesRefreshName
     ]
   });
 

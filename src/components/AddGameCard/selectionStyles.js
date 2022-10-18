@@ -11,10 +11,10 @@ const selectionStyles = {
   control: () => ({
     background: "white",
     width: "80%",
-    "margin-left": "5%",
-    "margin-top": "0.5rem",
+    marginLeft: "5%",
+    marginTop: "0.5rem",
     height: "3rem",
-    "font-size": "1.5rem",
+    fontSize: "1.5rem",
     overflow:"hidden"
   }),
   singleValue: (provided, state) => {
