@@ -1,0 +1,23 @@
+/* .plus {
+  height: 3.5rem;
+  width: 3.5rem;
+  color: #3F4E4F;
+  font-size: 3rem;
+  position:absolute;
+  border: 1px dashed #2C3639;
+  border-radius: 50%;
+  bottom:5%;
+  right:8%;
+  text-align: center;
+}
+
+.plus:hover {
+  background: #ddd;
+  border-radius: 60%;
+} */
+
+.add-at {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0;
+}

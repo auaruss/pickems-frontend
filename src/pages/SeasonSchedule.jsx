@@ -1,4 +1,5 @@
-import teams from './data/teams'
+
+import DisplayOneWeek from '../components/DisplayOneWeek/DisplayOneWeek';
 
 const END_WEEK = 18;
 
@@ -7,40 +8,15 @@ const WEEKS = [...Array(END_WEEK).keys()].map(n=>n+1)
 
 export default function SeasonSchedule() {
   return (
-    <div>
+    <main>
       <p>
         whoa look its the season schedule!<br/>
-        add some games here <br/><br/><br/>
-        <form>
-          Add a game: <br/>
-          <label>week: </label>
-          <select name="weeks">
-            {
-              WEEKS.map(week => (
-                <option value={week}>{ week }</option>
-              ))
-            }
-          </select> <br/>
-          <label>home team: </label>
-          <select name="home-teams">
-            {
-              teams.map(team => (
-                <option value={team.code}>{ team.name }</option>
-              ))
-            }
-          </select>
-          <br/>
-          <label>home team: </label>
-          <select name="away-teams">
-            {
-              teams.map(team => (
-                <option value={team.code}>{ team.name }</option>
-              ))
-            }
-          </select>
-        </form>
-      </p>
-      <button>add game to season! (this doesnt work yet lol)</button>
-    </div>
+        add some games here <br/><br/><br/></p>
+
+        <DisplayOneWeek 
+          week={1}
+
+        />
+    </main>
   )
 }

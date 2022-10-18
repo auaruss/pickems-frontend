@@ -1,0 +1,27 @@
+.game-card {
+  margin: 1rem auto;
+  background: #DCD7C9;
+  width: 19rem;
+  height: 15rem;
+  border-radius: 5%;
+  position: relative;
+  font-size: 2rem;
+}
+
+.game-card p {
+  color:#2C3639;
+}
+
+.week-heading {
+  color: #FFF8EA;
+  padding-left: 5rem;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 46rem) {
+  .display-week {
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    margin: 0 auto;
+    display: grid;
+  }
+}

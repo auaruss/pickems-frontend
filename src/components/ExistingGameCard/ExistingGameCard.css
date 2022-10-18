@@ -1,0 +1,14 @@
+.home {
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.at {
+  text-align: center;
+}
+
+.away {
+  padding-left: 2.5rem;
+  
+  padding-top: 1.5rem;
+}
